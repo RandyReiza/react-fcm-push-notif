@@ -22,6 +22,10 @@ function App() {
   messaging.requestPermission()
     .then(function() {
       console.log('Have permission');
+      return messaging.getToken();
+    })
+    .then(function(token) {
+      console.log('token: ', token);
     })
     .catch(function(err) {
       console.log('Error', err);
