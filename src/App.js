@@ -1,8 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import firebase from 'firebase';
 
 function App() {
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBt1t_G6eMxcVR69crboLD5jbB-Xtx_GDo",
+    authDomain: "pagii-3cd2b.firebaseapp.com",
+    databaseURL: "https://pagii-3cd2b.firebaseio.com",
+    projectId: "pagii-3cd2b",
+    storageBucket: "pagii-3cd2b.appspot.com",
+    messagingSenderId: "413386837261",
+    appId: "1:413386837261:web:ab782fecf6c08bc0c3b444",
+    measurementId: "G-QG0P98KWYJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
   return (
     <div className="App">
       <header className="App-header">
