@@ -29,7 +29,14 @@ function App() {
     })
     .catch(function(err) {
       console.log('Error', err);
-    });  
+    });
+
+
+  messaging.onMessage(function(payload) {
+    console.log('payload: ', payload);
+  });
+
+  
 
   return (
     <div className="App">
