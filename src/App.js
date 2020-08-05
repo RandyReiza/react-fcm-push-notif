@@ -18,6 +18,15 @@ function App() {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+    .then(function() {
+      console.log('Have permission');
+    })
+    .catch(function(err) {
+      console.log('Error', err);
+    });  
+
   return (
     <div className="App">
       <header className="App-header">
